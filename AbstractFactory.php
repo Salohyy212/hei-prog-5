@@ -11,9 +11,17 @@ abstract class Car implements Toy {
 }
 
 class LittleCarToy extends Car {
+    public function play(): string{
+        return "Play little Car";
+    }
+
 }
 
 class MiddleCarToy extends Car {
+    public function play(): string{
+        return "Play little Car";
+    }
+
 }
 
 abstract class Doll implements Toy {
@@ -23,9 +31,17 @@ abstract class Doll implements Toy {
 }
 
 class LittleDollToy extends Doll {
+    public function play(): string{
+        return "Play little Doll";
+    }
+
 }
 
 class MiddleDollToy extends Doll {
+    public function play(): string{
+        return "Play little Doll";
+    }
+
 }
 
 interface ToyFactory {
@@ -69,4 +85,4 @@ abstract class AbstractToyFactory {
 
 $myToy = AbstractToyFactory::makeToy(new CarFactory(), "child");
 var_dump($myToy);die();
-$myToy.play();
+$myToy->play();
