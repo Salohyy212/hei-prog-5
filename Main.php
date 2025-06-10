@@ -19,7 +19,6 @@ class UserRepository {
     public function findUser(string $id) {
         return USERS[$id] ?? null;
     }
-
     public function getUserById(string $id) {
         $log = new Logger();
         try {
